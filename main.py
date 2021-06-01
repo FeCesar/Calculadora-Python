@@ -29,6 +29,15 @@ def calcular(operacao, n1, n2):
         if(largest_number == n2):
             return n2 / n1
 
+    if(operacao == '=-'):
+        largest_number = maiorNumero(n1 ,n2)
+
+        if(largest_number == n1):
+            return n1 / n2
+        
+        if(largest_number == n2):
+            return n2 / n1
+
 def calculadora():
 
     repetir = True
