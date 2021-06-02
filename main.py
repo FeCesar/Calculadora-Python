@@ -7,39 +7,39 @@ def soma(n1, n2):
     return n1 + n2
 
 def subtracao(n1, n2):
-    largest_number = maiorNumero(n1, n2)
+    maior_numero = maiorNumero(n1, n2)
     
-    if(largest_number == n1):
+    if(maior_numero == n1):
         return n1 - n2
     
-    if(largest_number == n2):
+    if(maior_numero == n2):
         return n2 - n1
 
 def multiplicacao(n1, n2):
     return n1 * n2
 
 def divisao(n1, n2):
-    largest_number = maiorNumero(n1 ,n2)
+    maior_numero = maiorNumero(n1 ,n2)
 
-    if(largest_number == n1):
+    if(maior_numero == n1):
         return n1 / n2
     
-    if(largest_number == n2):
+    if(maior_numero == n2):
         return n2 / n1
 
 def calcular(operacao, n1, n2):
 
     if(operacao == '+'):
-        soma(n1 ,n2)
+        return soma(n1 ,n2)
 
     if(operacao == '-'):
-        subtracao(n1, n2)
+        return subtracao(n1, n2)
     
     if(operacao == '*'):
-        multiplicacao(n1, n2)
+        return multiplicacao(n1, n2)
 
     if(operacao == '/'):
-        divisao(n1, n2)
+        return divisao(n1, n2)
 
 def calculadora():
 
@@ -56,9 +56,11 @@ def calculadora():
         print(calcular(operacao, n1, n2))
 
         repetir = str(input("Deseja continuar? S/N: "))
+        repetir = repetir.upper()
+
         if(repetir == "S"):
             repetir = True
-        
+
         if(repetir == "N"):
             repetir = False
 
