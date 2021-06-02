@@ -54,8 +54,8 @@ Contribuir com o repositório:
     <br />
     <br />
     <p>No GitHub entre no repositório que está o fork do projeto e va até a aba Pull requests, a que está selecionada na figura, após isso clique em New pull request, o botão verde.</p>
-    <img src="./img/Pr.png" width="500px">
+    <img src="./img/Pr.png" width="700px">
     <br />
-    Na tela seguinte basta clicar em Create pull request e está feito!
+    Na tela seguinte basta clicar em Create pull request e está feito! :v: :grin:
   </li>
 </ul>
