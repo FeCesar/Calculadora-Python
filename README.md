@@ -19,6 +19,7 @@ Contribuir com o repositório:
   </ul>
   </li>
   <br />
+
   <li>
     Faça um Fork do repositório clicando em
     <br />
@@ -29,17 +30,32 @@ Contribuir com o repositório:
     </p>
   </li>
   <br />
-  <li><h3> Clonando o repositório: </h3></li>
+
+  <li><h3> Clonando o repositório: </h3>
     <br />
     <p>Abra o diretório escolhido no terminal e rode o comando:</p>
     
     $ git clone https://github.com/#coloque aqui seu perfil do GitHub ex: FeCesar#/Calculadora-Python.git
+  </li>  
   <br />
-  <li><h3>Enviar alterações:</h3></li>
+
+  <li><h3>Enviar alterações:</h3>
     <br/>
     <p>Após as alterações, com o diretório aberto no terminal execute os seguintes comandos: <p>
     
     Atualiza o diretório: $ add .
     Salva uma nova versão: $ git commit -m "mensagem que deseja"
     Envia a versão local para o repositório remoto: $ git push
+  </li>
+  <br />
+
+  <li>
+    Criar uma Pull request:
+    <br />
+    <br />
+    <p>No GitHub entre no repositório que está o fork do projeto e va até a aba Pull requests, a que está selecionada na figura, após isso clique em New pull request, o botão verde.</p>
+    <img src="./img/pr.png">
+    <br />
+    Na tela seguinte basta clicar em Create pull request e está feito!
+  </li>
 </ul>
