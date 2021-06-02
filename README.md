@@ -23,13 +23,13 @@ Contribuir com o repositório:
     <br />
     <p>Abra o diretório escolhido no terminal e rode o comando:</p>
     
-    git clone https://github.com/FeCesar/Calculadora-Python.git
+    $ git clone https://github.com/FeCesar/Calculadora-Python.git
   <br />
   <li>Enviar alterações:</li>
     <br/>
     <p>Após as alterações, com o diretório aberto no terminal execute os seguintes comandos: <p>
     
-    Atualiza o diretório: $git add .
-    Salva uma nova versão: $git commit -m "mensagem que deseja"
-    as
+    Atualiza o diretório: $ add .
+    Salva uma nova versão: $ git commit -m "mensagem que deseja"
+    Envia a versão local para o repositório remoto: $ git push
 </ul>
