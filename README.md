@@ -29,5 +29,7 @@ Contribuir com o repositório:
     <br/>
     <p>Após as alterações, com o diretório aberto no terminal execute os seguintes comandos: <p>
     
-    git add . #Atualiza o diretório
+    Atualiza o diretório: $git add .
+    Salva uma nova versão: $git commit -m "mensagem que deseja"
+    
 </ul>
