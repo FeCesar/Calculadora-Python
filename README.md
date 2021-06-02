@@ -31,5 +31,5 @@ Contribuir com o repositório:
     
     Atualiza o diretório: $git add .
     Salva uma nova versão: $git commit -m "mensagem que deseja"
-    
+    as
 </ul>
