@@ -1,10 +1,24 @@
+import numpy as np
+
 def maiorNumero(n1, n2):
 
     maiorNumero = [n1, n2]
     return max(maiorNumero)
 
-def soma(n1, n2):
-    return n1 + n2
+def soma(qtd_parcelas):
+    
+    valores = []
+    if(qtd_parcelas < 2):
+        print("Para realizar uma soma são necessários pelo menos dois números!")
+        return
+    
+    for i in range(qtd_parcelas):
+        valor = float(input("Digite o %dº número: " %(i)))
+        valores.append(valor)
+
+    resultado = np.sum(valores)
+
+    print(resultado)
 
 def subtracao(n1, n2):
     maior_numero = maiorNumero(n1, n2)
@@ -27,41 +41,46 @@ def divisao(n1, n2):
     if(maior_numero == n2):
         return n2 / n1
 
-def calcular(operacao, n1, n2):
+def calcular(operacao):
 
     if(operacao == '+'):
-        return soma(n1 ,n2)
+        qtd_numero_soma = int(input("Quantos números deseja somar: "))
+        soma(qtd_parcelas)
 
     if(operacao == '-'):
-        return subtracao(n1, n2)
+        return subtracao()
     
     if(operacao == '*'):
-        return multiplicacao(n1, n2)
+        return multiplicacao()
 
     if(operacao == '/'):
-        return divisao(n1, n2)
+        return divisao()
 
 def calculadora():
 
     repetir = True
 
-    while(repetir):
-        n1 = float(input("Digite o primeiro valor: "))
+    while(repetir):    
 
         print("-=-=-=- Selecione a Operação -=-=-=-")
-        operacao = str(input("| + | - | * | / | -> "))
+        operacao = str(input("| + | - | * | / | -> "))        
 
-        n2 = float(input("Digite o segundo valor: "))
-
-        print(calcular(operacao, n1, n2))
+        calcular(operacao)
 
         repetir = str(input("Deseja continuar? S/N: "))
         repetir = repetir.upper()
 
-        if(repetir == "S"):
-            repetir = True
-
-        if(repetir == "N"):
-            repetir = False
+        finalizar = False
+        while(finalizar == False):
+            if(repetir == "S"):
+                repetir = True
+                finalizar = True
+            elif(repetir == "N"):
+                repetir = False
+                finalizar = True
+            else:
+                finalizar = False
+                repetir = str(input("Deseja continuar? S/N: "))
+                repetir = repetir.upper()
 
 calculadora()
