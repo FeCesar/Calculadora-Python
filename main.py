@@ -13,7 +13,7 @@ def soma(qtd_parcelas):
         return
     
     for i in range(qtd_parcelas):
-        valor = float(input("Digite o %dº número: " %(i)))
+        valor = float(input("Digite o %dº número: " %(i + 1)))
         valores.append(valor)
 
     resultado = np.sum(valores)
@@ -41,7 +41,7 @@ def multiplicacao():
     print(produto)
     return
 
-def divisao(n1, n2):
+def divisao():
     
     dividendo = float(input("Digite o dividendo: "))
     divisor = float(input("Digite o divisor: "))
@@ -56,15 +56,15 @@ def calcular(operacao):
     if(operacao == '+'):
         qtd_numero_soma = int(input("Quantos números deseja somar: "))
         soma(qtd_numero_soma)
-
-    if(operacao == '-'):
+    elif(operacao == '-'):
         subtracao()
-    
-    if(operacao == '*'):
+    elif(operacao == '*'):
         multiplicacao()
-
-    if(operacao == '/'):
+    elif(operacao == '/'):
         divisao()
+    else:
+        print("Operação Inválida!\n")
+        return
 
 def calculadora():
 
@@ -73,11 +73,11 @@ def calculadora():
     while(repetir):    
 
         print("-=-=-=- Selecione a Operação -=-=-=-")
-        operacao = str(input("| + | - | * | / | -> "))        
+        operacao = (input("| + | - | * | / | -> "))
 
         calcular(operacao)
 
-        repetir = str(input("Deseja continuar? S/N: "))
+        repetir = input("Deseja continuar? S/N: ")
         repetir = repetir.upper()
 
         finalizar = False
@@ -89,8 +89,8 @@ def calculadora():
                 repetir = False
                 finalizar = True
             else:
-                finalizar = False
-                repetir = str(input("Deseja continuar? S/N: "))
+                finalizar = False                
+                repetir = input("Deseja continuar? S/N: ")
                 repetir = repetir.upper()
 
 calculadora()
