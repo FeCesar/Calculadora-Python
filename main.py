@@ -1,67 +1,96 @@
+import numpy as np
+
 def maiorNumero(n1, n2):
 
     maiorNumero = [n1, n2]
     return max(maiorNumero)
 
-def soma(n1, n2):
-    return n1 + n2
-
-def subtracao(n1, n2):
-    maior_numero = maiorNumero(n1, n2)
+def soma(qtd_parcelas):
     
-    if(maior_numero == n1):
-        return n1 - n2
+    valores = []
+    if(qtd_parcelas < 2):
+        print("Para realizar uma soma são necessários pelo menos dois números!")
+        return
     
-    if(maior_numero == n2):
-        return n2 - n1
+    for i in range(qtd_parcelas):
+        valor = float(input("Digite o %dº número: " %(i + 1)))
+        valores.append(valor)
 
-def multiplicacao(n1, n2):
-    return n1 * n2
+    resultado = np.sum(valores)
 
-def divisao(n1, n2):
-    maior_numero = maiorNumero(n1 ,n2)
+    print(resultado)
+    return
 
-    if(maior_numero == n1):
-        return n1 / n2
+def subtracao():
+
+    minuendo = float(input("Digite o minuendo: ")) 
+    subtraendo = float(input("Digite o subtraendo: "))  
+
+    resultado = minuendo - subtraendo
+
+    print(resultado)
+    return
+
+def multiplicacao():
+
+    fator1 = float(input("Digite um fator: ")) 
+    fator2 = float(input("Digite o outro fator: ")) 
+
+    produto = fator1 * fator2
+
+    print(produto)
+    return
+
+def divisao():
     
-    if(maior_numero == n2):
-        return n2 / n1
+    dividendo = float(input("Digite o dividendo: "))
+    divisor = float(input("Digite o divisor: "))
 
-def calcular(operacao, n1, n2):
+    quociente = dividendo / divisor
+
+    print(quociente)
+    return
+
+def calcular(operacao):
 
     if(operacao == '+'):
-        return soma(n1 ,n2)
-
-    if(operacao == '-'):
-        return subtracao(n1, n2)
-    
-    if(operacao == '*'):
-        return multiplicacao(n1, n2)
-
-    if(operacao == '/'):
-        return divisao(n1, n2)
+        qtd_numero_soma = int(input("Quantos números deseja somar: "))
+        soma(qtd_numero_soma)
+    elif(operacao == '-'):
+        subtracao()
+    elif(operacao == '*'):
+        multiplicacao()
+    elif(operacao == '/'):
+        divisao()
+    else:
+        print("Operação Inválida!\n")
+        return
 
 def calculadora():
 
     repetir = True
 
-    while(repetir):
-        n1 = float(input("Digite o primeiro valor: "))
+    while(repetir):    
 
         print("-=-=-=- Selecione a Operação -=-=-=-")
-        operacao = str(input("| + | - | * | / | -> "))
+        operacao = (input("| + | - | * | / | -> "))
 
-        n2 = float(input("Digite o segundo valor: "))
+        calcular(operacao)
 
-        print(calcular(operacao, n1, n2))
-
-        repetir = str(input("Deseja continuar? S/N: "))
+        repetir = input("Deseja continuar? S/N: ")
         repetir = repetir.upper()
 
-        if(repetir == "S"):
-            repetir = True
-
-        if(repetir == "N"):
-            repetir = False
+        finalizar = False
+        while(finalizar == False):
+            if(repetir == "S"):
+                repetir = True
+                finalizar = True
+            elif(repetir == "N"):
+                repetir = False
+                finalizar = True
+            else:
+                finalizar = False                
+                repetir = input("Deseja continuar? S/N: ")
+                repetir = repetir.upper()
 
 calculadora()
