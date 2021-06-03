@@ -19,42 +19,52 @@ def soma(qtd_parcelas):
     resultado = np.sum(valores)
 
     print(resultado)
+    return
 
-def subtracao(n1, n2):
-    maior_numero = maiorNumero(n1, n2)
-    
-    if(maior_numero == n1):
-        return n1 - n2
-    
-    if(maior_numero == n2):
-        return n2 - n1
+def subtracao():
 
-def multiplicacao(n1, n2):
-    return n1 * n2
+    minuendo = float(input("Digite o minuendo: ")) 
+    subtraendo = float(input("Digite o subtraendo: "))  
+
+    resultado = minuendo - subtraendo
+
+    print(resultado)
+    return
+
+def multiplicacao():
+
+    fator1 = float(input("Digite um fator: ")) 
+    fator2 = float(input("Digite o outro fator: ")) 
+
+    produto = fator1 * fator2
+
+    print(produto)
+    return
 
 def divisao(n1, n2):
-    maior_numero = maiorNumero(n1 ,n2)
-
-    if(maior_numero == n1):
-        return n1 / n2
     
-    if(maior_numero == n2):
-        return n2 / n1
+    dividendo = float(input("Digite o dividendo: "))
+    divisor = float(input("Digite o divisor: "))
+
+    quociente = dividendo / divisor
+
+    print(quociente)
+    return
 
 def calcular(operacao):
 
     if(operacao == '+'):
         qtd_numero_soma = int(input("Quantos números deseja somar: "))
-        soma(qtd_parcelas)
+        soma(qtd_numero_soma)
 
     if(operacao == '-'):
-        return subtracao()
+        subtracao()
     
     if(operacao == '*'):
-        return multiplicacao()
+        multiplicacao()
 
     if(operacao == '/'):
-        return divisao()
+        divisao()
 
 def calculadora():
 
